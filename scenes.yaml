@@ -1,0 +1,26 @@
+- id: '1666307880976'
+  name: Cozinha Bancada On
+  entities:
+    light.cozinha_bancada_light:
+      supported_color_modes:
+      - brightness
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Cozinha Bancada Light
+      supported_features: 40
+      color_mode: brightness
+      brightness: 254
+      state: 'on'
+  metadata: {}
+- id: '1666308026882'
+  name: Cozinha Bancada Off
+  entities:
+    light.cozinha_bancada_light:
+      supported_color_modes:
+      - brightness
+      off_with_transition: false
+      off_brightness: 254
+      friendly_name: Cozinha Bancada Light
+      supported_features: 40
+      state: 'off'
+  metadata: {}

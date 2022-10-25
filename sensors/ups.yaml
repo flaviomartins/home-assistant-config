@@ -1,0 +1,10 @@
+- platform: integration
+  name: CP1500 Energy
+  source: sensor.cp1500_power
+  unit_prefix: k
+  round: 2
+- platform: integration
+  name: CP900 Energy
+  source: sensor.cp900_power
+  unit_prefix: k
+  round: 2
