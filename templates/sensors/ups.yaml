@@ -1,0 +1,22 @@
+- name: CP1500 Power
+  unique_id: cp1500_power
+  unit_of_measurement: W
+  device_class: power
+  state_class: measurement
+  state: >
+    {% if states('sensor.cp1500_status_data') in ['OL', 'OL CHRG'] -%}
+      {{ ((states('sensor.cp1500_load') | int) / 100 * (states('sensor.cp1500_nominal_real_power') | int)) | int }}
+    {%- else -%}
+      0
+    {%- endif %}
+- name: CP900 Power
+  unique_id: cp900_power
+  unit_of_measurement: W
+  device_class: power
+  state_class: measurement
+  state: >
+    {% if states('sensor.cp900_status_data') in ['OL', 'OL CHRG'] -%}
+      {{ ((states('sensor.cp900_load') | int) / 100 * (states('sensor.cp900_nominal_real_power') | int)) | int }}
+    {%- else -%}
+      0
+    {%- endif %}

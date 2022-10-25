@@ -1,0 +1,15 @@
+power_readings:
+  name: Power readings
+  entities:
+    - sensor.pm_01_power
+    - sensor.pm_02_power
+    - sensor.pm_03_power
+    - sensor.pm_04_power
+    - sensor.pm_05_power
+    - sensor.pm_06_power
+    - sensor.pm_07_power
+    - sensor.pm_08_power
+    - sensor.pm_09_power
+    - sensor.pm_10_power
+    - sensor.pm_11_power
+    - sensor.pm_12_power

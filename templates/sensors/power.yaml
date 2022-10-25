@@ -1,0 +1,43 @@
+- name: Current Power
+  unique_id: current_power
+  unit_of_measurement: W
+  device_class: power
+  state_class: measurement
+  state: >
+    {{
+        [
+            states('sensor.pm_01_power'),
+            states('sensor.pm_02_power'),
+            states('sensor.pm_03_power'),
+            states('sensor.pm_04_power'),
+            states('sensor.pm_05_power'),
+            states('sensor.pm_06_power'),
+            states('sensor.pm_07_power'),
+            states('sensor.pm_08_power'),
+            states('sensor.pm_09_power'),
+            states('sensor.pm_10_power'),
+            states('sensor.pm_11_power'),
+            states('sensor.pm_12_power'),
+        ] | map('float') | sum | round(2)
+    }}
+- name: Consumed Energy
+  unique_id: consumed_energy
+  unit_of_measurement: kWh
+  device_class: energy
+  state_class: measurement
+  state: >
+    {{
+        [
+            states('sensor.pm_01_energy'),
+            states('sensor.pm_02_energy'),
+            states('sensor.pm_03_energy'),
+            states('sensor.pm_04_energy'),
+            states('sensor.pm_05_energy'),
+            states('sensor.pm_06_energy'),
+            states('sensor.pm_07_energy'),
+            states('sensor.pm_08_energy'),
+            states('sensor.pm_09_energy'),
+            states('sensor.pm_10_energy'),
+            states('sensor.pm_11_energy'),
+            states('sensor.pm_12_energy'),
+        ] | map('float') | sum | round(2) }}

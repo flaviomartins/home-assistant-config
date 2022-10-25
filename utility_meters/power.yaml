@@ -1,0 +1,12 @@
+daily_energy_consumption:
+  source: sensor.consumed_energy
+  cycle: daily
+  tariffs:
+    - Normal
+monthly_energy_consumption:
+  source: sensor.consumed_energy
+  cycle: monthly
+  offset:
+    days: 8
+  tariffs:
+    - Normal

@@ -1,0 +1,13 @@
+- platform: group
+  name: Sala Lights
+  unique_id: light.sala_lights
+  entities:
+    - light.sala_jantar_light
+    - light.sala_estar_light
+- platform: group
+  name: Sala Solario Lights
+  unique_id: light.sala_solario_lights
+  entities:
+    - light.sala_solario_1_light
+    - light.sala_solario_2_light
+    - light.sala_solario_3_light
