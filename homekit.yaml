@@ -1,0 +1,14 @@
+filter:
+  include_domains:
+    - climate
+    - cover
+    - lock
+  exclude_domains:
+    - camera
+    - media_player
+    - sensor
+    - script
+    - sensor
+    - switch
+    - scene
+    - light

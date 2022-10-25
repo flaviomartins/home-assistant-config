@@ -5,26 +5,77 @@ http:
   ip_ban_enabled: false
   login_attempts_threshold: 5
 
-# Configure a default setup of Home Assistant (frontend, api, etc)
-default_config:
+### This is the section that loads with the default_config
+
+dhcp:
+energy:
+frontend:
+homeassistant_alerts:
+image:
+media_source:
+my:
+network:
+person:
+sun:
+ssdp:
+stream:
+system_health:
+webhook:
+zeroconf:
+
+### End of the default_config stuff
+
+config:
+
+alexa: !include alexa.yaml
+
+discovery:
+
+#updater:
+
+light: !include light_groups.yaml
+
+logbook:
+  exclude:
+    entities:
+      - sensor.date
+      - sensor.time
+      - sensor.ha_uptime
+      - py.warnings
+
+history:
+  include:
+    domains:
+      - sensor
+      - switch
+      - media_player
+      - light
+      - binary_sensor
+      - cover
+
+  exclude:
+    entities:
+     - sensor.date
+     - sensor.time
+     - sensor.ha_uptime
+
+logger: !include logger.yaml
+recorder: !include recorder.yaml
 
 # Text to speech
 tts:
   - platform: google_translate
 
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
-
-alexa: !include alexa.yaml
-
-light: !include light_groups.yaml
+homekit: !include homekit.yaml
+group: !include_dir_merge_named group
+sensor: !include_dir_merge_list sensor
+automation: !include_dir_merge_list automation
+scene: !include_dir_merge_list scene
+switch: !include_dir_merge_list switch
+script: !include_dir_merge_named script
 
 template:
   - sensor: !include_dir_merge_list templates/sensors/
-
-sensor: !include_dir_merge_list sensors/
 
 utility_meter: !include_dir_merge_list utility_meters/
 
