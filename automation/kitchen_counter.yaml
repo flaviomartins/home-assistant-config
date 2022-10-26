@@ -1,5 +1,5 @@
 - id: "1666308227604"
-  alias: Cozinha Bancada Button On
+  alias: Kitchen Couter Button On
   description: ""
   trigger:
     - device_id: b29fc2e5417d63df041708ebd0058c1f
@@ -11,11 +11,11 @@
   action:
     - service: scene.turn_on
       target:
-        entity_id: scene.cozinha_bancada_up
+        entity_id: scene.kitchen_counter_up
       metadata: {}
   mode: single
 - id: "1666308489904"
-  alias: Cozinha Bancada Button Off
+  alias: Kitchen Counter Off
   description: ""
   trigger:
     - device_id: b29fc2e5417d63df041708ebd0058c1f
@@ -27,6 +27,6 @@
   action:
     - service: scene.turn_on
       target:
-        entity_id: scene.cozinha_bancada_off
+        entity_id: scene.kitchen_counter_off
       metadata: {}
   mode: single
