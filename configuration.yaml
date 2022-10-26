@@ -31,7 +31,7 @@ alexa: !include alexa.yaml
 
 discovery:
 
-#updater:
+# updater:
 
 light: !include light_groups.yaml
 
@@ -55,9 +55,9 @@ history:
 
   exclude:
     entities:
-     - sensor.date
-     - sensor.time
-     - sensor.ha_uptime
+      - sensor.date
+      - sensor.time
+      - sensor.ha_uptime
 
 logger: !include logger.yaml
 recorder: !include recorder.yaml

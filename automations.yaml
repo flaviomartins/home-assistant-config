@@ -1,32 +1,32 @@
-- id: '1666308227604'
+- id: "1666308227604"
   alias: Cozinha Bancada Button On
-  description: ''
+  description: ""
   trigger:
-  - device_id: b29fc2e5417d63df041708ebd0058c1f
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: turn_on
+    - device_id: b29fc2e5417d63df041708ebd0058c1f
+      domain: zha
+      platform: device
+      type: remote_button_short_press
+      subtype: turn_on
   condition: []
   action:
-  - service: scene.turn_on
-    target:
-      entity_id: scene.cozinha_bancada_up
-    metadata: {}
+    - service: scene.turn_on
+      target:
+        entity_id: scene.cozinha_bancada_up
+      metadata: {}
   mode: single
-- id: '1666308489904'
+- id: "1666308489904"
   alias: Cozinha Bancada Button Off
-  description: ''
+  description: ""
   trigger:
-  - device_id: b29fc2e5417d63df041708ebd0058c1f
-    domain: zha
-    platform: device
-    type: remote_button_double_press
-    subtype: turn_on
+    - device_id: b29fc2e5417d63df041708ebd0058c1f
+      domain: zha
+      platform: device
+      type: remote_button_double_press
+      subtype: turn_on
   condition: []
   action:
-  - service: scene.turn_on
-    target:
-      entity_id: scene.cozinha_bancada_off
-    metadata: {}
+    - service: scene.turn_on
+      target:
+        entity_id: scene.cozinha_bancada_off
+      metadata: {}
   mode: single

@@ -1,4 +1,4 @@
-smart_home: 
+smart_home:
   locale: en-US
   endpoint: https://api.amazonalexa.com/v3/events
   client_id: !secret alexa_client_id
