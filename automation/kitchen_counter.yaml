@@ -1,5 +1,5 @@
 - id: "1666308227604"
-  alias: Kitchen Couter Button On
+  alias: Kitchen Counter Button On
   description: ""
   trigger:
     - device_id: b29fc2e5417d63df041708ebd0058c1f
