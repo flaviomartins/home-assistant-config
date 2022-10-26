@@ -106,7 +106,13 @@ recorder: !include recorder.yaml
 
 # Text to speech
 tts:
-  - platform: google_translate
+  - platform: amazon_polly
+    aws_access_key_id: !secret aws_access_key_id
+    aws_secret_access_key: !secret aws_secret_access_key
+    region_name: "us-east-1"
+    text_type: ssml
+    voice: Joanna
+    cache: true
 
 homekit: !include homekit.yaml
 group: !include_dir_merge_named group
