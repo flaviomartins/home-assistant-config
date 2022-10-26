@@ -75,7 +75,7 @@ discovery:
 
 # updater:
 
-light: !include light_groups.yaml
+light: !include_dir_merge_list light
 
 logbook:
   exclude:
