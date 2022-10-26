@@ -1,0 +1,14 @@
+- platform: group
+  name: Playground Lights
+  unique_id: light.playground_lights
+  entities:
+    - light.playground_1_light
+    - light.playground_2_light
+    - light.playground_3_light
+- platform: group
+  name: Saloon Lights
+  unique_id: light.saloon_lights
+  entities:
+    - light.dining_light
+    - light.living_light
+    - ligth.playground_lights
