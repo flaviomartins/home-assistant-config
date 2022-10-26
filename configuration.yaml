@@ -1,3 +1,45 @@
+homeassistant:
+  # Name of this Home Assistant instance
+  name: Lisbon Home
+
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret zone_home_latitude
+  longitude: !secret zone_home_longitude
+
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret zone_home_elevation
+
+  # metric for Metric, imperial for Imperial
+  unit_system: Metric
+
+  # Time zone
+  # Pick yours from here:
+  # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Lisbon
+
+  # Currency
+  # Pick yours from here:
+  # https://en.wikipedia.org/wiki/ISO_4217#Active_codes
+  currency: EUR
+
+  # URL Definition
+  internal_url: !secret ha_internal_url
+  external_url: !secret ha_external_url
+
+  # Load packages
+  packages: !include_dir_named packages/
+
+  # Auth Providerrs
+  auth_providers:
+    - type: homeassistant
+    # List of trusted networks, consisting of IP addresses or networks,
+    # that are allowed to bypass password protection when accessing Home Assistant.
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.1.0/24
+        # - !secret external_ip
+      allow_bypass_login: true
+
 http:
   use_x_forwarded_for: true
   trusted_proxies:
