@@ -1,0 +1,5 @@
+- platform: rest
+  scan_interval: 86400
+  resource: https://api.ipify.org/
+  name: External IP
+  value_template: "{{ value }}"
