@@ -12,3 +12,12 @@ filter:
     - switch
     - scene
     - light
+  include_entities:
+    - light.dining_light
+    - light.living_light
+    - light.kitchen_counter_light
+    - light.playground_lights
+    - light.playground_1_light
+    - light.playground_2_light
+    - light.playground_3_light
+    - light.saloon_lights

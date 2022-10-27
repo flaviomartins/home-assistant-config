@@ -11,4 +11,7 @@
   entities:
     - light.dining_light
     - light.living_light
-    - ligth.playground_lights
+    - light.playground_1_light
+    - light.playground_2_light
+    - light.playground_3_light
+
