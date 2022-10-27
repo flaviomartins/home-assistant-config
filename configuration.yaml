@@ -75,6 +75,12 @@ discovery:
   ignore:
     - homekit
 
+device_tracker:
+  - platform: synology_srm
+    host: 192.168.1.1
+    username: !secret synology_srm_username
+    password: !secret synology_srm_password
+
 # updater:
 
 hue:
