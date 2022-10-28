@@ -145,4 +145,4 @@ script mine: !include_dir_merge_named script/
 template:
   - sensor: !include_dir_merge_list templates/sensor/
 
-utility_meter: !include_dir_merge_named utility_meter/
+utility_meter: !include utility_meters.yaml
