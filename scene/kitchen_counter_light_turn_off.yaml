@@ -1,0 +1,12 @@
+id: "kitchen_counter_turn_off"
+name: Kitchen Counter Light Turn Off
+entities:
+  light.kitchen_counter_light:
+    supported_color_modes:
+      - brightness
+    off_with_transition: false
+    off_brightness: 254
+    friendly_name: Kitchen Counter Light
+    supported_features: 40
+    state: "off"
+metadata: {}

@@ -1,0 +1,16 @@
+id: "kitchen_counter_button_double_press"
+alias: Kitchen Counter Button Double Press
+description: ""
+trigger:
+  - device_id: b29fc2e5417d63df041708ebd0058c1f
+    domain: zha
+    platform: device
+    type: remote_button_double_press
+    subtype: turn_on
+condition: []
+action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.kitchen_counter_light_turn_off
+    metadata: {}
+mode: single
