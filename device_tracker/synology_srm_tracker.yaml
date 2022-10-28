@@ -1,8 +1,0 @@
-platform: synology_srm
-host: 192.168.1.1
-username: !secret synology_srm_username
-password: !secret synology_srm_password
-interval_seconds: 30
-consider_home: 180
-new_device_defaults:
-  track_new_devices: true
