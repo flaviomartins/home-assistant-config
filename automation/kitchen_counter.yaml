@@ -15,7 +15,7 @@
       metadata: {}
   mode: single
 - id: "1666308489904"
-  alias: Kitchen Counter Off
+  alias: Kitchen Counter Button Off
   description: ""
   trigger:
     - device_id: b29fc2e5417d63df041708ebd0058c1f
