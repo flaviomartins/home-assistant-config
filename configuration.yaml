@@ -26,6 +26,11 @@ homeassistant:
   internal_url: !secret ha_internal_url
   external_url: !secret ha_external_url
 
+  # Automation initial_state is on
+  customize_domain:
+    automation:
+      initial_state: "on"
+
   # Load packages
   packages: !include_dir_named packages/
 
@@ -75,15 +80,7 @@ discovery:
   ignore:
     - homekit
 
-device_tracker:
-  - platform: synology_srm
-    host: 192.168.1.1
-    username: !secret synology_srm_username
-    password: !secret synology_srm_password
-    interval_seconds: 10
-    consider_home: 180
-    new_device_defaults:
-      track_new_devices: true
+device_tracker: !include_dir_list device_tracker/
 
 # updater:
 
@@ -135,14 +132,17 @@ tts:
     cache: true
 
 homekit: !include homekit.yaml
-group: !include_dir_merge_named group
-sensor: !include_dir_merge_list sensor
-automation: !include_dir_merge_list automation
-scene: !include_dir_merge_list scene
-switch: !include_dir_merge_list switch
-script: !include_dir_merge_named script
+group: !include_dir_merge_named group/
+sensor: !include_dir_merge_list sensor/
+automation: !include automations.yaml
+automation mine: !include_dir_list automation/
+scene: !include scenes.yaml
+scene mine: !include_dir_list scene/
+switch: !include_dir_merge_list switch/
+script: scripts.yaml
+script mine: !include_dir_merge_named script/
 
 template:
-  - sensor: !include_dir_merge_list templates/sensor
+  - sensor: !include_dir_merge_list templates/sensor/
 
-utility_meter: !include_dir_merge_list utility_meter
+utility_meter: !include_dir_list utility_meter/
