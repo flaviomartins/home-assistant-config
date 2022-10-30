@@ -12,12 +12,14 @@ filter:
     - switch
     - scene
     - light
+  exclude_entity_globs:
+    - switch.em_*
+    - switch.pm_*
+    - switch.*_plug
   include_entities:
     - light.dining_light
     - light.living_light
-    - light.kitchen_counter_light
     - light.playground_lights
-    - light.playground_1_light
-    - light.playground_2_light
-    - light.playground_3_light
     - light.saloon_lights
+    - light.greenhouse_ceiling_light
+    - light.kitchen_counter_light
