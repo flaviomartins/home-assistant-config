@@ -5,31 +5,44 @@ smart_home:
   client_secret: !secret alexa_client_secret
   filter:
     include_domains:
+      - climate
+      - cover
+      - lock
     exclude_domains:
+      - camera
+      - media_player
+      - sensor
+      - script
+      - sensor
+      - switch
+      - scene
+      - light
     include_entity_globs:
       - binary_sensor.*_door
-      - binary_sensor.*_flood
-      - binary_sensor.*_motion
       - binary_sensor.*_window
-      - light.sala_*
+      - binary_sensor.*_motion
+      - binary_sensor.*_flood
       - sensor.*_humidity
+      - sensor.*_luminosity
       - sensor.*_temperature
-      - sensor.*air_monitor*
+      - sensor.*_vibration
+      - sensor.*_carbon_dioxide
+      - sensor.*.pm10
+      - sensor.*_pm25
+      - sensor.*_ppbvoclevel
     exclude_entity_globs:
-      - switch.pm*
-      - sensor.*_battery_temperature
+      - switch.em_*
+      - switch.pm_*
       - switch.*_plug
     include_entities:
-      - fan.sala_air_purifier_table_fan
-      - light.cozinha_bancada_light
+      - light.dining_light
+      - light.living_light
+      - light.playground_lights
+      - light.saloon_lights
       - light.greenhouse_ceiling_light
-      - sensor.air_conditioner_room_temperature
-    exclude_entities:
-      - switch.outside
+      - light.kitchen_counter_light
 
   entity_config:
-    light.kitchen:
-      name: "Custom Name for Alexa"
-      description: "The light in the kitchen"
-    switch.stairs:
-      display_categories: LIGHT
+    light.kitchen_counter_light:
+      name: "Kitchen Counter Light"
+      description: "The light in the kitchen counter"
