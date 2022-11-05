@@ -1,26 +1,26 @@
-- name: Powercalc Current Power
-  unique_id: powercalc_current_power
+- name: Lights Current Power
+  unique_id: lights_current_power
   unit_of_measurement: W
   device_class: power
   state_class: measurement
   state: >
     {% set ns = namespace(states=[]) %}
     {% for s in states.sensor %}
-      {% if s.object_id.endswith('_device_power') %}
+      {% if s.object_id.endswith('light_power') or s.object_id.endswith('lamp_power') %}
         {% set ns.states = ns.states + [ s.state | float ] %}
       {% endif %}
     {% endfor %}
     {{ ns.states | sum | round(2) }}
 
-- name: Powercalc Consumed Energy
-  unique_id: powercalc_consumed_energy
+- name: Lights Consumed Energy
+  unique_id: lights_consumed_energy
   unit_of_measurement: kWh
   device_class: power
   state_class: measurement
   state: >
     {% set ns = namespace(states=[]) %}
     {% for s in states.sensor %}
-      {% if s.object_id.endswith('_device_energy') %}
+      {% if s.object_id.endswith('light_energy') or s.object_id.endswith('lamp_energy') %}
         {% set ns.states = ns.states + [ s.state | float ] %}
       {% endif %}
     {% endfor %}
