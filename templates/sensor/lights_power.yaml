@@ -6,7 +6,7 @@
   state: >
     {% set ns = namespace(states=[]) %}
     {% for s in states.sensor %}
-      {% if s.object_id.endswith('light_power') or s.object_id.endswith('lamp_power') %}
+      {% if s.object_id.endswith('lights_power') or s.object_id.endswith('lamps_power') or s.object_id.endswith('light_power') or s.object_id.endswith('lamp_power') %}
         {% set ns.states = ns.states + [ s.state | float ] %}
       {% endif %}
     {% endfor %}
@@ -20,7 +20,7 @@
   state: >
     {% set ns = namespace(states=[]) %}
     {% for s in states.sensor %}
-      {% if s.object_id.endswith('light_energy') or s.object_id.endswith('lamp_energy') %}
+      {% if s.object_id.endswith('lights_energy') or s.object_id.endswith('lamps_energy') or s.object_id.endswith('light_energy') or s.object_id.endswith('lamp_energy') %}
         {% set ns.states = ns.states + [ s.state | float ] %}
       {% endif %}
     {% endfor %}
