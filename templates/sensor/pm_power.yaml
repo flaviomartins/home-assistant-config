@@ -53,14 +53,3 @@
             states('sensor.pm_c_current_power'),
         ] | map('float') | sum | round(2)
     }}
-- name: Current Power
-  unique_id: current_power
-  unit_of_measurement: W
-  device_class: power
-  state_class: measurement
-  state: >
-    {{
-        [
-            states('sensor.pm_current_power'),
-        ] | map('float') | sum | round(2)
-    }}

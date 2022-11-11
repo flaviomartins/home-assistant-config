@@ -1,0 +1,22 @@
+- name: Current Power
+  unique_id: current_power
+  unit_of_measurement: W
+  device_class: power
+  state_class: measurement
+  state: >
+    {{
+        [
+            states('sensor.em_1_power'),
+        ] | map('float') | sum | round(2)
+    }}
+- name: Consumed Energy
+  unique_id: consumed_energy
+  unit_of_measurement: kWh
+  device_class: energy
+  state_class: measurement
+  state: >
+    {{
+        [
+            states('sensor.em_1_energy'),
+        ] | map('float') | sum | round(2)
+    }}
