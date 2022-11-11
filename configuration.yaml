@@ -144,5 +144,9 @@ script mine: !include_dir_merge_named script/
 
 template:
   - sensor: !include_dir_merge_list templates/sensor/
+  - trigger:
+    - platform: time_pattern
+      seconds: '/1'
+    sensor: !include_dir_merge_list templates/seconds_sensor/
 
 utility_meter: !include_dir_merge_named utility_meter/

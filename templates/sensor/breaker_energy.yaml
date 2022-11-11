@@ -1,0 +1,66 @@
+- name: PM A Consumed Energy
+  unique_id: pm_a_consumed_energy
+  unit_of_measurement: kWh
+  device_class: energy
+  state_class: measurement
+  state: >
+    {{
+        [
+            states('sensor.pm_01_energy'),
+            states('sensor.pm_02_energy'),
+            states('sensor.pm_03_energy'),
+            states('sensor.pm_04_energy'),
+        ] | map('float') | sum
+    }}
+- name: PM B Consumed Energy
+  unique_id: pm_b_consumed_energy
+  unit_of_measurement: kWh
+  device_class: energy
+  state_class: measurement
+  state: >
+    {{
+        [
+            states('sensor.pm_05_energy'),
+            states('sensor.pm_06_energy'),
+            states('sensor.pm_07_energy'),
+            states('sensor.pm_08_energy'),
+        ] | map('float') | sum
+    }}
+- name: PM C Consumed Energy
+  unique_id: pm_c_consumed_energy
+  unit_of_measurement: kWh
+  device_class: energy
+  state_class: measurement
+  state: >
+    {{
+        [
+            states('sensor.pm_09_energy'),
+            states('sensor.pm_10_energy'),
+            states('sensor.pm_11_energy'),
+            states('sensor.pm_12_energy'),
+        ] | map('float') | sum
+    }}
+- name: PM Consumed Energy
+  unique_id: pm_consumed_energy
+  unit_of_measurement: kWh
+  device_class: energy
+  state_class: measurement
+  state: >
+    {{
+        [
+            states('sensor.pm_a_consumed_energy'),
+            states('sensor.pm_b_consumed_energy'),
+            states('sensor.pm_c_consumed_energy'),
+        ] | map('float') | sum | round(2)
+    }}
+- name: Consumed Energy
+  unique_id: consumed_energy
+  unit_of_measurement: kWh
+  device_class: energy
+  state_class: measurement
+  state: >
+    {{
+        [
+            states('sensor.pm_consumed_energy'),
+        ] | map('float') | sum | round(2)
+    }}
