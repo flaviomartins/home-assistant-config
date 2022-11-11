@@ -53,14 +53,3 @@
             states('sensor.pm_c_consumed_energy'),
         ] | map('float') | sum | round(2)
     }}
-- name: Consumed Energy
-  unique_id: consumed_energy
-  unit_of_measurement: kWh
-  device_class: energy
-  state_class: measurement
-  state: >
-    {{
-        [
-            states('sensor.pm_consumed_energy'),
-        ] | map('float') | sum | round(2)
-    }}
