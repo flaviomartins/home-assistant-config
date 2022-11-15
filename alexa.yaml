@@ -29,12 +29,14 @@ smart_home:
       - sensor.*_carbon_dioxide
       - sensor.*.pm10
       - sensor.*_pm25
+      - sensor.*_particulate_matter
       - sensor.*_ppbvoclevel
     exclude_entity_globs:
       - switch.em_*
       - switch.pm_*
       - switch.*_plug
     include_entities:
+      - fan.saloon_air_purifier_table_ikeafan
       - light.dining_light
       - light.living_light
       - light.playground_lights
