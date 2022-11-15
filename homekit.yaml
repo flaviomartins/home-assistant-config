@@ -27,6 +27,7 @@ filter:
     - sensor.*_particulate_matter
     - sensor.*_ppbvoclevel
   exclude_entity_globs:
+    - sensor.*_battery_temperature
     - switch.em_*
     - switch.pm_*
     - switch.*_plug
