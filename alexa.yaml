@@ -31,6 +31,7 @@ smart_home:
       - sensor.*_pm25
       - sensor.*_particulate_matter
       - sensor.*_ppbvoclevel
+      - sensor.*_battery_temperature
     exclude_entity_globs:
       - switch.em_*
       - switch.pm_*
