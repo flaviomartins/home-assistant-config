@@ -17,6 +17,7 @@ filter:
     - binary_sensor.*_window
     - binary_sensor.*_motion
     - binary_sensor.*_flood
+    - sensor.*_battery
     - sensor.*_humidity
     - sensor.*_luminosity
     - sensor.*_temperature
@@ -30,9 +31,7 @@ filter:
     - sensor.*_battery_temperature
     - switch.em_*
     - switch.pm_*
-    - switch.*_plug
   include_entities:
-    - fan.saloon_air_purifier_table_ikeafan
     - light.dining_light
     - light.living_light
     - light.playground_lights
