@@ -43,6 +43,7 @@ smart_home:
       - light.saloon_lights
       - light.greenhouse_ceiling_light
       - light.kitchen_counter_light
+      - switch.dehumidifier
 
   entity_config:
     light.kitchen_counter_light:
