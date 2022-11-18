@@ -18,20 +18,16 @@ smart_home:
       - scene
       - light
     include_entity_globs:
-      - binary_sensor.*_door
-      - binary_sensor.*_window
       - binary_sensor.*_motion
-      - binary_sensor.*_flood
-      - sensor.*_battery
-      - sensor.*_humidity
-      - sensor.*_luminosity
-      - sensor.*_temperature
       - sensor.*_vibration
+      - sensor.*_luminosity
+      - sensor.*_humidity
+      - sensor.*_temperature
+      - sensor.*_ppbvoclevel
       - sensor.*_carbon_dioxide
+      - sensor.*_particulate_matter
       - sensor.*.pm10
       - sensor.*_pm25
-      - sensor.*_particulate_matter
-      - sensor.*_ppbvoclevel
     exclude_entity_globs:
       - sensor.*_battery_temperature
       - switch.em_*
