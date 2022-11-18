@@ -38,3 +38,4 @@ filter:
     - light.saloon_lights
     - light.greenhouse_ceiling_light
     - light.kitchen_counter_light
+    - switch.dehumidifier
