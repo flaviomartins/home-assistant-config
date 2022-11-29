@@ -46,12 +46,10 @@ homeassistant:
       allow_bypass_login: true
 
 http:
-  server_host: "0.0.0.0"
-  server_port: 8123
   use_x_forwarded_for: true
   trusted_proxies:
     - 172.30.33.0/24
-  ip_ban_enabled: true
+  ip_ban_enabled: false
   login_attempts_threshold: 5
 
 ### This is the section that loads with the default_config
