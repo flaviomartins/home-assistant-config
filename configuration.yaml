@@ -46,10 +46,12 @@ homeassistant:
       allow_bypass_login: true
 
 http:
+  server_host: "192.168.1.1"
+  server_port: 8123
   use_x_forwarded_for: true
   trusted_proxies:
     - 172.30.33.0/24
-  ip_ban_enabled: false
+  ip_ban_enabled: true
   login_attempts_threshold: 5
 
 ### This is the section that loads with the default_config
@@ -145,8 +147,8 @@ script mine: !include_dir_merge_named script/
 template:
   - sensor: !include_dir_merge_list templates/sensor/
   - trigger:
-    - platform: time_pattern
-      seconds: '/1'
+      - platform: time_pattern
+        seconds: "/1"
     sensor: !include_dir_merge_list templates/seconds_sensor/
 
 utility_meter: !include_dir_merge_named utility_meter/
