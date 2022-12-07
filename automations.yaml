@@ -1,0 +1,28 @@
+- id: '1670291009036'
+  alias: Sunrise Automation
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: 0
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 728712c3e989d94809b4999925725c67
+    entity_id: fan.saloon_air_purifier_table_ikeafan
+    domain: fan
+  mode: single
+- id: '1670291057332'
+  alias: Sunset Automation
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 0
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 728712c3e989d94809b4999925725c67
+    entity_id: fan.saloon_air_purifier_table_ikeafan
+    domain: fan
+  mode: single
