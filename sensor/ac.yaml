@@ -1,5 +1,5 @@
 - platform: integration
   name: Air Conditioner Energy
-  source: sensor.air_conditioner_energy
+  source: sensor.air_conditioner_power
   unit_prefix: k
   round: 2
