@@ -60,7 +60,6 @@ dhcp:
 energy:
 frontend:
 homeassistant_alerts:
-image:
 media_source:
 my:
 network:
