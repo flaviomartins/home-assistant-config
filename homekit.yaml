@@ -8,7 +8,6 @@ filter:
     - media_player
     - sensor
     - script
-    - sensor
     - switch
     - scene
     - light
