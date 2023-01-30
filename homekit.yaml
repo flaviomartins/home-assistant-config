@@ -1,9 +1,9 @@
 filter:
   include_domains:
-    - climate
     - cover
     - lock
   exclude_domains:
+    - climate
     - camera
     - media_player
     - sensor
@@ -14,15 +14,9 @@ filter:
   include_entity_globs:
     - "*._meter_*"
     - "*.lisbon_home_weather_*"
-    - "*.air_conditioner_*"
     - "*.aqara_air_monitor_*"
     - "*.bedroom_air_monitor_*"
     - "*.office_air_monitor_*"
-    - "*.azul_window_*"
-    - "*.wc_motion_*"
-    - "*.greenhouse_flood_*"
-    - "*.playground_flood_*"
-    - "*.saloon_air_purifier_table_*"
   exclude_entity_globs:
     - "switch.em_*"
     - "switch.pm_*"
