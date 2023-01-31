@@ -14,9 +14,8 @@ filter:
   include_entity_globs:
     - "*._meter_*"
     - "*.lisbon_home_weather_*"
-    - "*.aqara_air_monitor_*"
-    - "*.bedroom_air_monitor_*"
-    - "*.office_air_monitor_*"
+    - "*.air_monitor_*"
+    - "*.awair_*"
   exclude_entity_globs:
     - "switch.em_*"
     - "switch.pm_*"
