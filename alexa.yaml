@@ -18,10 +18,10 @@ smart_home:
       - scene
       - light
     include_entity_globs:
-      - "*._meter_*"
-      - "*.lisbon_home_weather_*"
-      - "*.air_monitor_*"
-      - "*.awair_*"
+      - "*.*_meter_*"
+      - "*.*_awair_*"
+      - "*.*_air_monitor_*"
+      - "*.*_home_weather_*"
     exclude_entity_globs:
       - "switch.em_*"
       - "switch.pm_*"
