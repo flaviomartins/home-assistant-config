@@ -18,9 +18,9 @@ smart_home:
       - scene
       - light
     include_entity_globs:
-      - "*.*_meter_*"
-      - "*.*_awair_*"
-      - "*.*_air_monitor_*"
+      - "sensor.*_meter_*"
+      - "sensor.*_awair_*"
+      - "sensor.*_air_monitor_*"
       - "*.*_home_weather_*"
     exclude_entity_globs:
       - "switch.em_*"
@@ -32,7 +32,11 @@ smart_home:
       - light.saloon_lights
       - light.greenhouse_ceiling_light
       - light.kitchen_counter_light
-      - switch.dehumidifier
+      - light.kitchen_lights
+      - light.laundry_lights
+      - light.wc_lights
+      - light.left_lamp
+      - light.right_lamp
 
   entity_config:
     light.kitchen_counter_light:
