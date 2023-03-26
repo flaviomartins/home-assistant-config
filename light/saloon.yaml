@@ -11,3 +11,4 @@
   entities:
     - light.dining_light
     - light.living_light
+    - light.playground_lights
