@@ -1,10 +1,10 @@
 - platform: average
   name: "Average Temperature"
   entities:
-    - sensor.azul_temperature
-    - sensor.bedroom_temperature
+    - sensor.azul_meter_temperature
+    - sensor.bedroom_meter_temperature
 - platform: average
   name: "Average Humidity"
   entities:
-    - sensor.azul_humidity
-    - sensor.bedroom_humidity
+    - sensor.azul_meter_humidity
+    - sensor.bedroom_meter_humidity
