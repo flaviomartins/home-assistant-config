@@ -13,7 +13,7 @@
   unique_id: consumed_energy
   unit_of_measurement: kWh
   device_class: energy
-  state_class: measurement
+  state_class: total_increasing
   state: >
     {{
         [
