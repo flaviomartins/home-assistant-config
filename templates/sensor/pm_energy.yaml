@@ -2,7 +2,7 @@
   unique_id: pm_a_consumed_energy
   unit_of_measurement: kWh
   device_class: energy
-  state_class: measurement
+  state_class: total_increasing
   state: >
     {{
         [
@@ -16,7 +16,7 @@
   unique_id: pm_b_consumed_energy
   unit_of_measurement: kWh
   device_class: energy
-  state_class: measurement
+  state_class: total_increasing
   state: >
     {{
         [
@@ -30,7 +30,7 @@
   unique_id: pm_c_consumed_energy
   unit_of_measurement: kWh
   device_class: energy
-  state_class: measurement
+  state_class: total_increasing
   state: >
     {{
         [
@@ -44,7 +44,7 @@
   unique_id: pm_consumed_energy
   unit_of_measurement: kWh
   device_class: energy
-  state_class: measurement
+  state_class: total_increasing
   state: >
     {{
         [
