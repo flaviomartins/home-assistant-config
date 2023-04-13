@@ -24,6 +24,7 @@ logs:
   homeassistant.components.sensor.rest: info
   homeassistant.components.sensor.darksky: warn
   homeassistant.components.tplink.switch: error
+  homeassistant.components.zha: debug
   homeassistant.components.zwave: warn
   homeassistant.exceptions: info
   homeassistant.helpers.script: info
@@ -35,3 +36,4 @@ logs:
   urllib3.connectionpool: error
   requests.packages.urllib3.connectionpool: critical
   root: warn
+  zigpy: debug
