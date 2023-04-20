@@ -167,3 +167,5 @@ template:
     sensor: !include_dir_merge_list templates/seconds_sensor/
 
 utility_meter: !include_dir_merge_named utility_meter/
+
+influxdb: !include influxdb.yaml

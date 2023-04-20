@@ -1,0 +1,15 @@
+host: a0d7b954-influxdb
+port: 8086
+database: homeassistant
+username: !secret influxdb_username
+password: !secret influxdb_password
+max_retries: 3
+default_measurement: state
+exclude:
+  domains:
+    - zwave
+    - automation
+  entities:
+    - sensor.date
+    - sensor.date_time
+    - sensor.time
