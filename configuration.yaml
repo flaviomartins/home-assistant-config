@@ -92,12 +92,6 @@ device_tracker: !include_dir_list device_tracker/
 
 # updater:
 
-hue:
-  bridges:
-    - host: 192.168.0.91
-      allow_unreachable: true
-      allow_hue_groups: false
-
 zha:
   zigpy_config:
     ota:
