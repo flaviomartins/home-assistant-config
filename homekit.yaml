@@ -27,3 +27,5 @@ filter:
     - light.greenhouse_ceiling_light
     - light.kitchen_counter_light
     - switch.dehumidifier
+    - light.left_lamp
+    - light.right_lamp
