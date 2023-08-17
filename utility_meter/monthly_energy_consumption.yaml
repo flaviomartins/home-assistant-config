@@ -4,4 +4,5 @@ monthly_energy_consumption:
   offset:
     days: 8
   tariffs:
-    - Normal
+    - Fora de Vazio
+    - Vazio
