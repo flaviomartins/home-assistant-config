@@ -84,10 +84,6 @@ config:
 
 alexa: !include alexa.yaml
 
-discovery:
-  ignore:
-    - homekit
-
 device_tracker: !include_dir_list device_tracker/
 
 # updater:
@@ -112,6 +108,8 @@ logbook:
       - sensor.time
       - sensor.ha_uptime
       - py.warnings
+      - sensor.em_energy_todaysumimport
+      - sensor.em_energy_todaysumexport
 
 history:
   include:
