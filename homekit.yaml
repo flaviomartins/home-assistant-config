@@ -29,3 +29,4 @@ filter:
     - switch.dehumidifier
     - light.left_lamp
     - light.right_lamp
+    - light.office_lamp
