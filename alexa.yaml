@@ -34,7 +34,7 @@ smart_home:
       - light.kitchen_counter_light
       - light.kitchen_lights
       - light.laundry_lights
-      - light.wc_lights
+      - light.toilet_lights
       - light.left_lamp
       - light.right_lamp
 
