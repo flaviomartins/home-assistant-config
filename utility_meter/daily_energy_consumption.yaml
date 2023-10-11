@@ -1,4 +1,4 @@
-daily_energy_consumption:
+daily_energy:
   source: sensor.consumed_energy
   cycle: daily
   tariffs:
