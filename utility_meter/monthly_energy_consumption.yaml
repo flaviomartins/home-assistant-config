@@ -1,8 +1,8 @@
-monthly_energy_consumption:
+monthly_energy:
   source: sensor.consumed_energy
   cycle: monthly
-  offset:
-    days: 8
   tariffs:
     - Fora de Vazio
     - Vazio
+  offset:
+    days: 8
