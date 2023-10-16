@@ -28,7 +28,7 @@ smart_home:
     include_entities:
       - light.dining_light
       - light.living_light
-      - light.playground_lights
+      - light.tv_light
       - light.saloon_lights
       - light.greenhouse_ceiling_light
       - light.kitchen_counter_light
