@@ -16,6 +16,14 @@ filter:
     - "sensor.*_awair_*"
     - "sensor.*_air_monitor_*"
     - "*.*_home_weather_*"
+    - "fan.*_extractor"
+    - "*.*_flood"
+    - "*.*_motion"
+    - "*.*_plug"
+    - "*.*_lights"
+    - "*.*_luminosity"
+    - "*.*_temperature"
+    - "*.*_vibration"
   exclude_entity_globs:
     - "switch.em_*"
     - "switch.pm_*"
@@ -26,6 +34,8 @@ filter:
     - light.saloon_lights
     - light.greenhouse_ceiling_light
     - light.kitchen_counter_light
+    - light.kitchen_lights
+    - light.laundry_lights
     - switch.dehumidifier
     - light.left_lamp
     - light.right_lamp
