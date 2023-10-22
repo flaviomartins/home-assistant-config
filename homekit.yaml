@@ -1,32 +1,38 @@
 filter:
   include_domains:
-    - cover
-    - lock
-  exclude_domains:
-    - climate
+    - alarm_control_panel
+    - binary_sensor
     - camera
-    - media_player
+    - climate
+    - cover
+    - fan
+    - lock
     - sensor
-    - script
     - switch
-    - scene
+  exclude_domains:
+    - automation
+    - button
+    - device_tracker
+    - event
     - light
+    - media_player
+    - number
+    - person
+    - scene
+    - script
+    - update
   include_entity_globs:
-    - "sensor.*_meter_*"
-    - "sensor.*_awair_*"
-    - "sensor.*_air_monitor_*"
-    - "*.*_home_weather_*"
-    - "fan.*_extractor"
-    - "*.*_flood"
-    - "*.*_motion"
-    - "*.*_plug"
     - "*.*_lights"
-    - "*.*_luminosity"
-    - "*.*_temperature"
-    - "*.*_vibration"
   exclude_entity_globs:
-    - "switch.em_*"
-    - "switch.pm_*"
+    - "*.flavios_*"
+    - "*.joanas_*"
+    - "*.front_load_washer_*" 
+    - "binary_sensor.entertainment_area_*"
+    - "binary_sensor.*_tamper"
+    - "fan.*_ikeafan"
+    - "switch.em*"
+    - "switch.pm*"
+    - "switch.front_door_*"
   include_entities:
     - light.dining_light
     - light.living_light
@@ -36,7 +42,9 @@ filter:
     - light.kitchen_counter_light
     - light.kitchen_lights
     - light.laundry_lights
-    - switch.dehumidifier
     - light.left_lamp
     - light.right_lamp
     - light.office_lamp
+  exclude_entities:
+    - switch.office_wc_switch
+    - switch.tv_switch
