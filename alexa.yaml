@@ -5,26 +5,39 @@ smart_home:
   client_secret: !secret alexa_client_secret
   filter:
     include_domains:
+      - binary_sensor
       - cover
+      - fan
       - lock
-    exclude_domains:
-      - climate
-      - camera
-      - media_player
-      - sensor
-      - script
       - sensor
       - switch
-      - scene
+    exclude_domains:
+      - alarm_control_panel
+      - automation
+      - button
+      - camera
+      - climate
+      - device_tracker
+      - event
       - light
+      - media_player
+      - number
+      - person
+      - scene
+      - script
+      - update
     include_entity_globs:
-      - "sensor.*_meter_*"
-      - "sensor.*_awair_*"
-      - "sensor.*_air_monitor_*"
-      - "*.*_home_weather_*"
+      - "*.*_lights"
     exclude_entity_globs:
-      - "switch.em_*"
-      - "switch.pm_*"
+      - "*.flavios_*"
+      - "*.joanas_*"
+      - "*.front_load_washer_*" 
+      - "binary_sensor.entertainment_area_*"
+      - "binary_sensor.*_tamper"
+      - "fan.*_ikeafan"
+      - "switch.em*"
+      - "switch.pm*"
+      - "switch.front_door_*"
     include_entities:
       - light.dining_light
       - light.living_light
