@@ -33,6 +33,7 @@ filter:
     - "switch.em*"
     - "switch.pm*"
     - "switch.front_door_*"
+    - "switch.*_siren"
   include_entities:
     - light.dining_light
     - light.living_light
