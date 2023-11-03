@@ -24,6 +24,7 @@ filter:
   include_entity_globs:
     - "*.*_lights"
   exclude_entity_globs:
+    - "*.withings_*"
     - "*.flavios_*"
     - "*.joanas_*"
     - "*.front_load_washer_*" 
@@ -47,5 +48,6 @@ filter:
     - light.right_lamp
     - light.office_lamp
   exclude_entities:
+    - switch.air_conditioner_jet_mode
     - switch.office_wc_switch
     - switch.tv_switch
