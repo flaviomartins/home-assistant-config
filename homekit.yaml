@@ -31,6 +31,7 @@ filter:
     - "binary_sensor.entertainment_area_*"
     - "binary_sensor.*_tamper"
     - "fan.*_ikeafan"
+    - "switch.automation*"
     - "switch.em*"
     - "switch.pm*"
     - "switch.front_door_*"
