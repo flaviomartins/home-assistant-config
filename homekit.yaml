@@ -2,7 +2,6 @@ filter:
   include_domains:
     - alarm_control_panel
     - binary_sensor
-    - camera
     - climate
     - cover
     - fan
@@ -11,6 +10,7 @@ filter:
     - switch
   exclude_domains:
     - automation
+    - camera
     - button
     - device_tracker
     - event
@@ -27,7 +27,7 @@ filter:
     - "*.withings_*"
     - "*.flavios_*"
     - "*.joanas_*"
-    - "*.front_load_washer_*" 
+    - "*.front_load_washer_*"
     - "binary_sensor.entertainment_area_*"
     - "binary_sensor.*_tamper"
     - "fan.*_ikeafan"
