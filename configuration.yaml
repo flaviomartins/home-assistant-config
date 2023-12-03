@@ -112,20 +112,6 @@ logbook:
       - sensor.em_energy_todaysumexport
 
 history:
-  include:
-    domains:
-      - sensor
-      - switch
-      - media_player
-      - light
-      - binary_sensor
-      - cover
-
-  exclude:
-    entities:
-      - sensor.date
-      - sensor.time
-      - sensor.ha_uptime
 
 logger: !include logger.yaml
 recorder: !include recorder.yaml
