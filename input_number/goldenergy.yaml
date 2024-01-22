@@ -1,0 +1,40 @@
+goldenergy_5_75_kva_simples_fixed_cost:
+  name: "Simples EUR/day"
+  initial: 0.3934
+  min: 0
+  max: 1.5
+  step: 0.001
+  unit_of_measurement: "EUR/day"
+  mode: box
+goldenergy_5_75_kva_simples_cost:
+  name: "Simples EUR/kWh"
+  initial: 0.1359
+  min: 0
+  max: 0.3
+  step: 0.001
+  unit_of_measurement: "EUR/kWh"
+  mode: box
+goldenergy_5_75_kva_bi_horaria_ciclo_diario_fixed_cost:
+  name: "Bi-Horaria EUR/day"
+  initial: 0.3934
+  min: 0
+  max: 1.5
+  step: 0.001
+  unit_of_measurement: "EUR/day"
+  mode: box
+goldenergy_5_75_kva_bi_horaria_ciclo_diario_vazio_cost:
+  name: "Bi-Horaria Vazio EUR/kWh"
+  initial: 0.0921
+  min: 0
+  max: 0.3
+  step: 0.001
+  unit_of_measurement: "EUR/kWh"
+  mode: box
+goldenergy_5_75_kva_bi_horaria_ciclo_diario_fora_de_vazio_cost:
+  name: "Bi-Horaria Fora de Vazio EUR/kWh"
+  initial: 0.1693
+  min: 0
+  max: 0.3
+  step: 0.001
+  unit_of_measurement: "EUR/kWh"
+  mode: box
