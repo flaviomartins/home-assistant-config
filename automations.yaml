@@ -7,10 +7,16 @@
     offset: 0
   condition: []
   action:
-  - type: turn_on
-    device_id: 728712c3e989d94809b4999925725c67
-    entity_id: fan.saloon_air_purifier_table_ikeafan
-    domain: fan
+  - service: fan.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id: 768aba2888718844fe27b39f8fc7de36
+  - service: fan.turn_on
+    metadata: {}
+    data: {}
+    target:
+      device_id: 768aba2888718844fe27b39f8fc7de36
   mode: single
 - id: '1670291057332'
   alias: Sunset Automation
@@ -21,8 +27,10 @@
     offset: 0
   condition: []
   action:
-  - type: turn_off
-    device_id: 728712c3e989d94809b4999925725c67
-    entity_id: fan.saloon_air_purifier_table_ikeafan
-    domain: fan
+  - service: fan.set_percentage
+    metadata: {}
+    data:
+      percentage: 10
+    target:
+      device_id: 768aba2888718844fe27b39f8fc7de36
   mode: single
