@@ -28,21 +28,26 @@ filter:
     - "*.flavios_*"
     - "*.joanas_*"
     - "*.front_load_washer_*"
-    - "binary_sensor.entertainment_area_*"
+    - "binary_sensor.*_nightlight"
+    - "binary_sensor.*_replace_filter"
     - "binary_sensor.*_tamper"
+    - "binary_sensor.entertainment_area*"
     - "fan.*_starkvind*"
     - "sensor.*_weather_realfeel_temperature_*_day_*"
+    - "switch.*_child_lock"
+    - "switch.*_disable_led"
+    - "switch.*_siren"
     - "switch.automation*"
     - "switch.em*"
     - "switch.pm*"
     - "switch.front_door_*"
-    - "switch.*_siren"
   include_entities:
     - light.dining_light
+    - light.front_door_light
     - light.living_light
     - light.tv_light
     - light.saloon_lights
-    - light.greenhouse_ceiling_light
+    - light.green_ceiling_light
     - light.kitchen_counter_light
     - light.kitchen_lights
     - light.laundry_lights
