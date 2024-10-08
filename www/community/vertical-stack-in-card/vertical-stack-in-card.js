@@ -1,4 +1,4 @@
-console.log(`%cvertical-stack-in-card\n%cVersion: ${'0.4.1'}`, 'color: #1976d2; font-weight: bold;', '');
+console.log(`%cvertical-stack-in-card\n%cVersion: ${'0.4.4'}`, 'color: #1976d2; font-weight: bold;', '');
 
 class VerticalStackInCard extends HTMLElement {
   constructor() {
@@ -127,6 +127,7 @@ class VerticalStackInCard extends HTMLElement {
         let ele = element.shadowRoot.querySelector('ha-card');
         ele.style.boxShadow = 'none';
         ele.style.borderRadius = '0';
+        ele.style.border = "none";
         if ('styles' in config) {
           Object.entries(config.styles).forEach(([key, value]) => ele.style.setProperty(key, value));
         }
@@ -149,6 +150,7 @@ class VerticalStackInCard extends HTMLElement {
         let ele = element.querySelector('ha-card');
         ele.style.boxShadow = 'none';
         ele.style.borderRadius = '0';
+        ele.style.border = "none";
         if ('styles' in config) {
           Object.entries(config.styles).forEach(([key, value]) => ele.style.setProperty(key, value));
         }
@@ -176,8 +178,25 @@ class VerticalStackInCard extends HTMLElement {
   async getCardSize() {
     await this._cardSize.promise;
     const sizes = await Promise.all(this._refCards.map(this._computeCardSize));
-    return sizes.reduce((a, b) => a + b);
+    return sizes.reduce((a, b) => a + b, 0);
+  }
+
+  static getConfigElement() {
+    return customElements.get('hui-vertical-stack-card').getConfigElement();
+  }
+
+  static getStubConfig() {
+    return {
+      cards: [],
+    };
   }
 }
 
 customElements.define('vertical-stack-in-card', VerticalStackInCard);
+window.customCards = window.customCards || [];
+window.customCards.push({
+  type: 'vertical-stack-in-card',
+  name: 'Vertical Stack In Card',
+  description: 'Group multiple cards into a single sleek card.',
+  preview: false,
+});

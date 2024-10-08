@@ -69,7 +69,7 @@ smart_home:
       - binary_sensor.front_door_sensor
       - binary_sensor.hallway_motion
       - switch.air_conditioner_jet_mode
-      - switch.office_wc_switch
+      - switch.green_wc_switch
       - switch.tv_switch
 
   entity_config:

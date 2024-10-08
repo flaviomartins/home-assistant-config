@@ -6,7 +6,7 @@
   state: >
     {{
         [
-            states('sensor.pm_current_power'),
+            states('sensor.em_energy_power_0'),
         ] | map('float') | sum | round(2)
     }}
 - name: Consumed Energy
@@ -17,6 +17,6 @@
   state: >
     {{
         [
-            states('sensor.pm_consumed_energy'),
+            states('sensor.em_energy_total_0'),
         ] | map('float') | sum | round(2)
     }}

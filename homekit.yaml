@@ -56,5 +56,5 @@ filter:
     - light.office_lamp
   exclude_entities:
     - switch.air_conditioner_jet_mode
-    - switch.office_wc_switch
+    - switch.guest_wc_switch
     - switch.tv_switch
