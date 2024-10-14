@@ -2,5 +2,5 @@
   name: Hallway Lights
   unique_id: light.hallway_lights
   entities:
-    - light.hallway_wall_light_1
-    - light.hallway_wall_light_2
+    - light.hallway_a_light
+    - light.hallway_b_light

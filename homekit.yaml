@@ -47,13 +47,13 @@ filter:
     - light.living_light
     - light.tv_light
     - light.saloon_lights
-    - light.green_ceiling_light
+    - light.green_light
     - light.kitchen_counter_light
     - light.kitchen_lights
     - light.laundry_lights
-    - light.left_lamp
-    - light.right_lamp
-    - light.office_lamp
+    - light.left_table_lamp
+    - light.right_table_lamp
+    - light.office_table_lamp
   exclude_entities:
     - switch.air_conditioner_jet_mode
     - switch.guest_wc_switch

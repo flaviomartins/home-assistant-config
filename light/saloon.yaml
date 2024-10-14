@@ -2,9 +2,9 @@
   name: Dining Light
   unique_id: light.dining_light
   entities:
-    - light.dining_1_light
-    - light.dining_2_light
-    - light.dining_3_light
+    - light.dining_a_light
+    - light.dining_b_light
+    - light.dining_c_light
 - platform: group
   name: Saloon Lights
   unique_id: light.saloon_lights
