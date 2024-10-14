@@ -56,13 +56,14 @@ smart_home:
       - light.living_light
       - light.tv_light
       - light.saloon_lights
-      - light.green_ceiling_light
+      - light.green_light
       - light.kitchen_counter_light
       - light.kitchen_lights
       - light.laundry_lights
       - light.toilet_lights
-      - light.left_lamp
-      - light.right_lamp
+      - light.left_table_lamp
+      - light.right_table_lamp
+      - light.office_table_lamp
     exclude_entities:
       - binary_sensor.front_door_motion
       - binary_sensor.front_door_keypad_motion
