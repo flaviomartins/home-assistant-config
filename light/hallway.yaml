@@ -1,6 +1,6 @@
 - platform: group
-  name: Hallway Lights
-  unique_id: light.hallway_lights
+  name: Office Lights
+  unique_id: light.office_lights
   entities:
-    - light.hallway_a_light
-    - light.hallway_b_light
+    - light.office_a_light
+    - light.office_b_light
