@@ -6,8 +6,10 @@ smart_home:
   filter:
     include_domains:
       - binary_sensor
+      - climate
       - cover
       - fan
+      - light
       - lock
       - sensor
       - switch
@@ -16,10 +18,8 @@ smart_home:
       - automation
       - button
       - camera
-      - climate
       - device_tracker
       - event
-      - light
       - media_player
       - number
       - person
@@ -30,48 +30,45 @@ smart_home:
       - "*.*_lights"
     exclude_entity_globs:
       - "*.withings_*"
-      - "*.flavios_*"
-      - "*.joanas_*"
-      - "*.front_load_washer_*" 
+      - "*.front_door_*"
+      - "*.front_load_washer_*"
+      - "binary_sensor.*_flood"
       - "binary_sensor.*_nightlight"
+      - "binary_sensor.*_overcurrent"
       - "binary_sensor.*_overheating"
       - "binary_sensor.*_overpowering"
       - "binary_sensor.*_overvoltage"
+      - "binary_sensor.*_problem"
       - "binary_sensor.*_replace_filter"
       - "binary_sensor.*_tamper"
       - "binary_sensor.entertainment_area*"
-      - "sensor.*_weather_realfeel_temperature_*_day_*"
       - "fan.*_ikeafan"
+      - "light.*_a_*"
+      - "light.*_b_*"
+      - "light.*_c_*"
+      - "light.*_d_*"
+      - "light.dresden_elektronik*"
+      - "sensor.*_weather_realfeel_temperature_*_day_*"
       - "switch.*_child_lock"
       - "switch.*_disable_led"
       - "switch.*_plug"
       - "switch.*_siren"
       - "switch.automation*"
       - "switch.em*"
+      - "switch.hacs*"
       - "switch.pm*"
-      - "switch.front_door_*"
     include_entities:
-      - light.dining_light
+      - button.pet_feeder_feed
       - light.front_door_light
-      - light.living_light
-      - light.tv_light
-      - light.saloon_lights
-      - light.green_light
-      - light.kitchen_counter_light
-      - light.kitchen_lights
-      - light.laundry_lights
-      - light.toilet_lights
-      - light.left_table_lamp
-      - light.right_table_lamp
-      - light.office_table_lamp
     exclude_entities:
-      - binary_sensor.front_door_motion
-      - binary_sensor.front_door_keypad_motion
-      - binary_sensor.front_door_sensor
-      - binary_sensor.hallway_motion
-      - switch.air_conditioner_jet_mode
-      - switch.green_wc_switch
+      - climate.air_conditioner
+      - switch.dehumidifier
+      - switch.guest_wc_extractor
+      - switch.guest_wc_switch
+      - switch.toilet_extractor
       - switch.tv_switch
+      - switch.saloon_media_switch
+      - switch.red_fan
 
   entity_config:
     light.kitchen_counter_light:

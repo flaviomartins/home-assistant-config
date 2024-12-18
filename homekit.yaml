@@ -25,10 +25,9 @@ filter:
     - "*.*_lights"
   exclude_entity_globs:
     - "*.withings_*"
-    - "*.flavios_*"
-    - "*.joanas_*"
     - "*.front_load_washer_*"
     - "binary_sensor.*_nightlight"
+    - "binary_sensor.*_problem"
     - "binary_sensor.*_replace_filter"
     - "binary_sensor.*_tamper"
     - "binary_sensor.entertainment_area*"
@@ -53,7 +52,8 @@ filter:
     - light.laundry_lights
     - light.left_table_lamp
     - light.right_table_lamp
-    - light.office_table_lamp
+    - light.desk_table_lamp
+    - light.office_lights
   exclude_entities:
     - switch.air_conditioner_jet_mode
     - switch.guest_wc_switch
