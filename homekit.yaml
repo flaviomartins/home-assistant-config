@@ -33,9 +33,11 @@ filter:
     - "binary_sensor.entertainment_area*"
     - "fan.*_starkvind*"
     - "sensor.*_weather_realfeel_temperature_*_day_*"
+    - "sensor.outside_*"
     - "switch.*_child_lock"
     - "switch.*_disable_led"
     - "switch.*_siren"
+    - "switch.*_switch"
     - "switch.automation*"
     - "switch.em*"
     - "switch.pm*"
@@ -56,5 +58,3 @@ filter:
     - light.office_lights
   exclude_entities:
     - switch.air_conditioner_jet_mode
-    - switch.guest_wc_switch
-    - switch.tv_switch
