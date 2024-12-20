@@ -36,7 +36,7 @@ homeassistant:
   # Load packages
   packages: !include_dir_named packages/
 
-  # Auth Providerrs
+  # Auth Providers
   auth_providers:
     - type: homeassistant
     # List of trusted networks, consisting of IP addresses or networks,
@@ -44,7 +44,15 @@ homeassistant:
     - type: trusted_networks
       trusted_networks:
         - 192.168.1.0/24
-        # - !secret external_ip
+        - 192.168.2.0/24
+      trusted_users:
+        192.168.1.0/24:
+          - !secret user_id_guest
+          - !secret user_id_kiosk
+        192.168.1.92: !secret user_id_kiosk
+        192.168.2.0/24:
+          - !secret user_id_guest
+          - !secret user_id_kiosk
       allow_bypass_login: true
 
 http:
