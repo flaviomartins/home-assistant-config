@@ -1,70 +1,70 @@
-- id: '1670291009036'
+- id: "1670291009036"
   alias: Sunrise Automation
-  description: ''
+  description: ""
   trigger:
-  - platform: sun
-    event: sunrise
-    offset: 0
+    - platform: sun
+      event: sunrise
+      offset: 0
   condition: []
   action:
-  - service: fan.turn_off
-    metadata: {}
-    data: {}
-    target:
-      device_id: 768aba2888718844fe27b39f8fc7de36
-  - service: fan.turn_on
-    metadata: {}
-    data: {}
-    target:
-      device_id: 768aba2888718844fe27b39f8fc7de36
+    - service: fan.turn_off
+      metadata: {}
+      data: {}
+      target:
+        device_id: 768aba2888718844fe27b39f8fc7de36
+    - service: fan.turn_on
+      metadata: {}
+      data: {}
+      target:
+        device_id: 768aba2888718844fe27b39f8fc7de36
   mode: single
-- id: '1670291057332'
+- id: "1670291057332"
   alias: Sunset Automation
-  description: ''
+  description: ""
   trigger:
-  - platform: sun
-    event: sunset
-    offset: 0
+    - platform: sun
+      event: sunset
+      offset: 0
   condition: []
   action:
-  - service: fan.set_percentage
-    metadata: {}
-    data:
-      percentage: 10
-    target:
-      device_id: 768aba2888718844fe27b39f8fc7de36
+    - service: fan.set_percentage
+      metadata: {}
+      data:
+        percentage: 10
+      target:
+        device_id: 768aba2888718844fe27b39f8fc7de36
   mode: single
-- id: '1728908276630'
+- id: "1728908276630"
   alias: Kitchen Counter Manual Turn on
-  description: ''
+  description: ""
   triggers:
-  - device_id: b29fc2e5417d63df041708ebd0058c1f
-    domain: zha
-    type: remote_button_double_press
-    subtype: turn_on
-    trigger: device
+    - device_id: b29fc2e5417d63df041708ebd0058c1f
+      domain: zha
+      type: remote_button_double_press
+      subtype: turn_on
+      trigger: device
   conditions: []
   actions:
-  - action: light.turn_on
-    metadata: {}
-    data: {}
-    target:
-      device_id: 00e045ea593163d26707f03e9f2dcd4a
+    - action: light.turn_on
+      metadata: {}
+      data: {}
+      target:
+        device_id: 00e045ea593163d26707f03e9f2dcd4a
   mode: single
-- id: '1728908344618'
+- id: "1728908344618"
   alias: Kitchen Counter Manual Turn off
-  description: ''
+  description: ""
   triggers:
-  - device_id: b29fc2e5417d63df041708ebd0058c1f
-    domain: zha
-    type: remote_button_short_press
-    subtype: turn_on
-    trigger: device
+    - device_id: b29fc2e5417d63df041708ebd0058c1f
+      domain: zha
+      type: remote_button_short_press
+      subtype: turn_on
+      trigger: device
   conditions: []
   actions:
-  - action: light.turn_off
-    metadata: {}
-    data: {}
-    target:
-      device_id: 00e045ea593163d26707f03e9f2dcd4a
+    - action: light.turn_off
+      metadata: {}
+      data: {}
+      target:
+        device_id: 00e045ea593163d26707f03e9f2dcd4a
   mode: single
