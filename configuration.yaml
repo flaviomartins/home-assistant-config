@@ -9,8 +9,8 @@ homeassistant:
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: !secret zone_home_elevation
 
-  # metric for Metric, imperial for Imperial
-  unit_system: Metric
+  # metric for metric, us_customary for US Customary
+  unit_system: metric
 
   country: PT
 
