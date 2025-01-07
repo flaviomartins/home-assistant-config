@@ -77,14 +77,13 @@ alexa: !include alexa.yaml
 
 zha:
   zigpy_config:
+    network:
+      channel: 15
+      channels: [15, 20, 25]
     ota:
       otau_directory: /config/zigpy_ota
-      ikea_provider: true
-      inovelli_provider: true
-      ledvance_provider: true
-      salus_provider: true
-      sonoff_provider: true
-      thirdreality_provider: true
+      extra_providers:
+        - type: ikea
 
 # discovery:
 
