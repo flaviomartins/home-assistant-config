@@ -69,32 +69,11 @@ http:
   ip_ban_enabled: false
   login_attempts_threshold: 5
 
-### This is the section that loads with the default_config
-
-dhcp:
-energy:
-frontend:
-homeassistant_alerts:
-media_source:
-my:
-network:
-person:
-sun:
-ssdp:
-stream:
-system_health:
-webhook:
-zeroconf:
-
-### End of the default_config stuff
+default_config:
 
 config:
 
 alexa: !include alexa.yaml
-
-device_tracker: !include_dir_list device_tracker/
-
-# updater:
 
 zha:
   zigpy_config:
@@ -106,6 +85,8 @@ zha:
       salus_provider: true
       sonoff_provider: true
       thirdreality_provider: true
+
+# discovery:
 
 light: !include_dir_merge_list light
 
