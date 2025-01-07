@@ -1,6 +1,14 @@
 purge_keep_days: 14
 exclude:
   domains:
+    - camera
     - device_tracker
   entity_globs:
     - sensor.*uptime*
+    - binary_sensor.*_motion
+  entities:
+    - sensor.date
+    - sensor.time
+    - sensor.ha_uptime
+    - sun.sun
+    - zone.home
