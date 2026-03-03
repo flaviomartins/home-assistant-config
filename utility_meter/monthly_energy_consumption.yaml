@@ -1,5 +1,5 @@
 monthly_energy:
-  source: sensor.consumed_energy
+  source: sensor.breaker_energy
   cycle: monthly
   tariffs:
     - Fora de Vazio
