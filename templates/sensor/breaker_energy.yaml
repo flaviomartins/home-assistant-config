@@ -1,0 +1,17 @@
+- name: Breaker Energy
+  unique_id: breaker_energy
+  device_class: energy
+  state_class: total_increasing
+  unit_of_measurement: kWh
+  state: >
+    {{ expand('group.breaker_meter_energy')
+       | selectattr('state','is_number')
+       | map(attribute='state')
+       | map('float')
+       | sum
+       | round(3) }}
+  availability: >
+    {{ expand('group.breaker_meter_energy')
+       | selectattr('state','is_number')
+       | list
+       | count > 0 }}

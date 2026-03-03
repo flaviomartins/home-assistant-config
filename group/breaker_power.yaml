@@ -1,5 +1,5 @@
-breaker_power:
-  name: Breaker Power
+breaker_meter_power:
+  name: Breaker Meter Power
   entities:
     - sensor.pm_01_power
     - sensor.pm_02_power
