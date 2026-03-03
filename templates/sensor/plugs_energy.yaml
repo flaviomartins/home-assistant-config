@@ -1,21 +1,21 @@
-- name: Plugs Power
-  unique_id: plugs_power
-  unit_of_measurement: W
-  device_class: power
-  state_class: measurement
+- name: Plugs Energy
+  unique_id: plugs_energy
+  unit_of_measurement: kWh
+  device_class: energy
+  state_class: total_increasing
   state: >
     {% set sensors =
       states.sensor
-      | selectattr('object_id','search','plug_power$')
+      | selectattr('object_id','search','plug_energy$')
       | selectattr('state','is_number')
       | map(attribute='state')
       | map('float')
       | list %}
-    {{ sensors | sum | round(0) }}
+    {{ sensors | sum | round(3) }}
   availability: >
     {{
       states.sensor
-      | selectattr('object_id','search','plug_power$')
+      | selectattr('object_id','search','plug_energy$')
       | selectattr('state','is_number')
       | list
       | count > 0
