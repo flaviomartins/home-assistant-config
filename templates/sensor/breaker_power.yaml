@@ -1,5 +1,5 @@
-- name: Breaker Power
-  unique_id: breaker_power
+- name: Current Power
+  unique_id: current_power
   device_class: power
   state_class: measurement
   unit_of_measurement: W
