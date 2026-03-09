@@ -1,14 +1,102 @@
-purge_keep_days: 14
+purge_keep_days: 14      # keep 14 days of history
+auto_purge: true         # automatically purge old data
+commit_interval: 5       # seconds between commits to DB (improves SQLite performance)
+
 exclude:
+  # Noisy event types
+  event_types:
+    - service_registered
+    - call_service
+    - platform_discovered
+    - service_removed
+    - call_service_finished
+    - device_registry_updated
+    - entity_registry_updated
+    - homeassistant_start
+    - homeassistant_stop
+    - automation_triggered
+    - script_started
+    - script_finished
+
+    # Integration-specific noisy events
+    - component_loaded
+    - alexa_smart_home
+    - homekit_state_change
+    - ios.became_active
+    - ios.entered_background
+    - ios.notification_action_fired
+    - zwave_js_value_notification
+    - zwave_js_notification
+    - mqtt_message_received
+    - bluetooth_le_event
+
+  # High-frequency or low-value domains
   domains:
-    - camera
+    # Automation & scripts
+    - automation
+    - script
+
+    # Updates / notifications
+    - update
+    - persistent_notification
+    - repair
+    - diagnostic
+
+    # Action-only entities
+    - button
+
+    # High-frequency device domains
     - device_tracker
+    - media_player
+    - camera
+    - remote
+    - scene
+    - zone
+
   entity_globs:
-    - sensor.*uptime*
+
+    # Time sensors
+    - sensor.time*
+    - sensor.date*
+    - sensor.date_time*
+
+    # Battery / device health
+    - sensor.*_battery*
+    - sensor.*_battery_level*
+    - sensor.*_battery_voltage*
+
+    # Zigbee diagnostics
+    - sensor.*_linkquality*
+    - sensor.*_lqi
+    - sensor.*_rssi
+    - sensor.*_last_seen
+
+    # Motion / occupancy
     - binary_sensor.*_motion
-  entities:
-    - sensor.date
-    - sensor.time
-    - sensor.ha_uptime
-    - sun.sun
-    - zone.home
+    - binary_sensor.*_occupancy
+    - binary_sensor.*_presence
+
+    # Light level
+    - sensor.*_illuminance
+    - sensor.*_luminosity
+    - sensor.*_lux
+
+    # Device uptime
+    - sensor.*_uptime
+    - sensor.*_signal*
+
+    # System diagnostics
+    - sensor.system_monitor_*
+
+    # Power monitoring
+    - sensor.*_current
+    - sensor.*_factor
+    - sensor.*_frequency
+    - sensor.*_voltage
+
+    # Air quality sensors
+    - sensor.*_awair_score
+
+    # Network metrics
+    - sensor.*_download*
+    - sensor.*_upload*
