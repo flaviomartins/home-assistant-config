@@ -125,7 +125,7 @@ switch: !include_dir_merge_list switch/
 script: !include scripts.yaml
 script mine: !include_dir_merge_named script/
 
-template: !include_dir_merge_list templates/template/
+template: !include_dir_merge_list template/
 
 utility_meter: !include_dir_merge_named utility_meter/
 
