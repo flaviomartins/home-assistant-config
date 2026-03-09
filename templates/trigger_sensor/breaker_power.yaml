@@ -1,0 +1,26 @@
+- trigger:
+    - platform: state
+      entity_id: "{{ expand('group.breaker_meter_power') | map(attribute='entity_id') | list }}"
+      for:
+        seconds: 5
+
+  sensor:
+    - name: Current Power
+      unique_id: current_power
+      unit_of_measurement: W
+      device_class: power
+      state_class: measurement
+
+      state: >
+        {{ expand('group.breaker_meter_power')
+           | selectattr('state','is_number')
+           | map(attribute='state')
+           | map('float')
+           | sum
+           | round(0) }}
+
+      availability: >
+        {{ expand('group.breaker_meter_power')
+           | selectattr('state','is_number')
+           | list
+           | count > 0 }}
