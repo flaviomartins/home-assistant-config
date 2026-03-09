@@ -1,9 +1,0 @@
-- name: Current Power
-  unique_id: current_power
-  device_class: power
-  state_class: measurement
-  unit_of_measurement: W
-  state: >
-    {{ states('sensor.breaker_power') | float | round(0) }}
-  availability: >
-    {{ has_value('sensor.breaker_power') }}
