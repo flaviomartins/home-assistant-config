@@ -1,8 +1,5 @@
 monthly_energy:
   source: sensor.breaker_energy
   cycle: monthly
-  tariffs:
-    - Fora de Vazio
-    - Vazio
   offset:
     days: 8

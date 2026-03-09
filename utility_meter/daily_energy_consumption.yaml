@@ -1,6 +1,3 @@
 daily_energy:
   source: sensor.breaker_energy
   cycle: daily
-  tariffs:
-    - Fora de Vazio
-    - Vazio
