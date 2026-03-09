@@ -125,9 +125,7 @@ switch: !include_dir_merge_list switch/
 script: !include scripts.yaml
 script mine: !include_dir_merge_named script/
 
-template:
-  - sensor: !include_dir_merge_list templates/sensor/
-  - trigger: !include_dir_merge_list templates/trigger_sensor/
+template: !include_dir_merge_list templates/template/
 
 utility_meter: !include_dir_merge_named utility_meter/
 
