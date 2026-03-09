@@ -1,6 +1,6 @@
 - trigger:
     - platform: state
-      entity_id: "{{ expand('group.breaker_meter_power') | map(attribute='entity_id') | list }}"
+      entity_id: group.breaker_meter_power
       for:
         seconds: 5
 
