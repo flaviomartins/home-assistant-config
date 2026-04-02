@@ -63,14 +63,12 @@ smart_home:
     exclude_entities:
       - climate.air_conditioner
       - switch.dehumidifier
-      - switch.guest_wc_extractor
       - switch.guest_wc_switch
       - switch.toilet_extractor
-      - switch.tv_switch
       - switch.saloon_media_switch
       - switch.red_fan
 
   entity_config:
-    light.kitchen_counter_light:
+    light.kitchen_counter:
       name: "Kitchen Counter Light"
       description: "The light in the kitchen counter"

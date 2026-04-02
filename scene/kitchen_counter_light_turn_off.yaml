@@ -1,7 +1,7 @@
 id: "kitchen_counter_turn_off"
 name: Kitchen Counter Light Turn Off
 entities:
-  light.kitchen_counter_light:
+  light.kitchen_counter:
     supported_color_modes:
       - brightness
     off_with_transition: false
