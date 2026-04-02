@@ -1,14 +1,14 @@
 - platform: group
   name: Dining Light
-  unique_id: light.dining_light
+  unique_id: light.dining
   entities:
-    - light.dining_a_light
-    - light.dining_b_light
-    - light.dining_c_light
+    - light.dining_a
+    - light.dining_b
+    - light.dining_c
 - platform: group
   name: Saloon Lights
-  unique_id: light.saloon_lights
+  unique_id: light.saloon
   entities:
-    - light.tv_light
-    - light.living_light
-    - light.dining_light
+    - light.tv
+    - light.living
+    - light.dining

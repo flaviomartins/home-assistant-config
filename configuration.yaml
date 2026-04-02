@@ -92,12 +92,7 @@ light: !include_dir_merge_list light
 logbook:
   exclude:
     entities:
-      - sensor.date
-      - sensor.time
-      - sensor.ha_uptime
       - py.warnings
-      - sensor.em_energy_todaysumimport
-      - sensor.em_energy_todaysumexport
 
 history:
 
