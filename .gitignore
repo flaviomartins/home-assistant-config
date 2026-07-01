@@ -2,6 +2,7 @@ __pycache__
 .cloud/
 .storage/
 custom_components/
+www/community/
 home-assistant.*
 home-assistant_v2.*
 ip_bans.yaml
