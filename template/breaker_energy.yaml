@@ -13,14 +13,13 @@
 
       state: >
         {{ expand('group.breaker_meter_energy')
-           | selectattr('state','is_number')
            | map(attribute='state')
            | map('float')
            | sum
            | round(3) }}
 
       availability: >
-        {{ expand('group.breaker_meter_energy')
-           | selectattr('state','is_number')
-           | list
-           | count > 0 }}
+        {% set entities = expand('group.breaker_meter_energy') | list %}
+        {{ entities | count > 0
+           and entities | selectattr('state', 'is_number') | list | count
+               == entities | count }}
