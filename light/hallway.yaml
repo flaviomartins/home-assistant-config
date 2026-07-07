@@ -1,6 +1,0 @@
-- platform: group
-  name: Office Lights
-  unique_id: light.office
-  entities:
-    - light.office_a
-    - light.office_b
