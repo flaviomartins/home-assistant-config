@@ -1,5 +1,5 @@
 - fan:
-    - name: "Westinghouse Cayuga"
+    - name: "Red Fan"
       unique_id: red_fan
 
       state: >
