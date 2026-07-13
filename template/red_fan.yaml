@@ -1,0 +1,70 @@
+- fan:
+    - name: "Westinghouse Cayuga"
+      unique_id: red_fan
+
+      state: >
+        {{ states('input_number.red_fan_speed') | int > 0 }}
+
+      percentage: >
+        {{ (states('input_number.red_fan_speed') | int / 3 * 100) | round(0) }}
+
+      speed_count: 3
+
+      turn_on:
+        - variables:
+            speed: >
+              {% set s = states('input_number.red_fan_speed') | int %}
+              {{ 1 if s == 0 else s }}
+
+        - action: remote.send_command
+          target:
+            entity_id: remote.red_universal_remote
+          data:
+            device: westinghouse_cayuga
+            command: "speed_{{ speed }}"
+
+        - action: input_number.set_value
+          target:
+            entity_id: input_number.red_fan_speed
+          data:
+            value: "{{ speed }}"
+
+      turn_off:
+        - action: remote.send_command
+          target:
+            entity_id: remote.red_universal_remote
+          data:
+            device: westinghouse_cayuga
+            command: speed_0
+
+        - action: input_number.set_value
+          target:
+            entity_id: input_number.red_fan_speed
+          data:
+            value: 0
+
+      set_percentage:
+        - variables:
+            speed: >
+              {% if percentage == 0 %}
+                0
+              {% elif percentage <= 33 %}
+                1
+              {% elif percentage <= 66 %}
+                2
+              {% else %}
+                3
+              {% endif %}
+
+        - action: remote.send_command
+          target:
+            entity_id: remote.red_universal_remote
+          data:
+            device: westinghouse_cayuga
+            command: "speed_{{ speed }}"
+
+        - action: input_number.set_value
+          target:
+            entity_id: input_number.red_fan_speed
+          data:
+            value: "{{ speed }}"
