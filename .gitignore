@@ -1,3 +1,6 @@
+.ha_run.lock
+watchman_report.txt
+
 __pycache__
 .cloud/
 .storage/
