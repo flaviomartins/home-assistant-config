@@ -82,10 +82,9 @@
     at: '22:00:00'
   conditions: []
   actions:
-  - device_id: 107e8fecffa168c7c6c84d98be574d78
-    domain: button
-    entity_id: acfc32ffb2624e73cc0b5de149076295
-    type: press
-    metadata:
-      secondary: false
+  - action: button.press
+    metadata: {}
+    target:
+      device_id: 45117f17d03c838cacc74634f4310d0e
+    data: {}
   mode: single
