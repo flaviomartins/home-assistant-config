@@ -66,7 +66,7 @@ smart_home:
       - switch.guest_wc_switch
       - switch.toilet_extractor
       - switch.saloon_media_switch
-      - switch.red_fan
+      - fan.saloon_fan
 
   entity_config:
     light.kitchen_counter:

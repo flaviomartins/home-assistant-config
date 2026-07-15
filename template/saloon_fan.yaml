@@ -1,6 +1,6 @@
 - fan:
-    - name: "Red Fan"
-      unique_id: red_fan
+    - name: "Saloon Fan"
+      unique_id: saloon_fan
 
       state: >
         {{ states('input_number.westinghouse_cayuga_speed') | int > 0 }}
