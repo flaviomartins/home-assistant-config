@@ -1,5 +1,5 @@
-red_fan_speed:
-  name: "Red Fan Speed"
+westinghouse_cayuga_speed:
+  name: "Westinghouse Cayuga Fan Speed"
   min: 0
   max: 3
   step: 1

@@ -3,17 +3,17 @@
       unique_id: red_fan
 
       state: >
-        {{ states('input_number.red_fan_speed') | int > 0 }}
+        {{ states('input_number.westinghouse_cayuga_speed') | int > 0 }}
 
       percentage: >
-        {{ (states('input_number.red_fan_speed') | int / 3 * 100) | round(0) }}
+        {{ (states('input_number.westinghouse_cayuga_speed') | int / 3 * 100) | round(0) }}
 
       speed_count: 3
 
       turn_on:
         - variables:
             speed: >
-              {% set s = states('input_number.red_fan_speed') | int %}
+              {% set s = states('input_number.westinghouse_cayuga_speed') | int %}
               {{ 1 if s == 0 else s }}
 
         - action: remote.send_command
@@ -25,7 +25,7 @@
 
         - action: input_number.set_value
           target:
-            entity_id: input_number.red_fan_speed
+            entity_id: input_number.westinghouse_cayuga_speed
           data:
             value: "{{ speed }}"
 
@@ -39,7 +39,7 @@
 
         - action: input_number.set_value
           target:
-            entity_id: input_number.red_fan_speed
+            entity_id: input_number.westinghouse_cayuga_speed
           data:
             value: 0
 
@@ -65,6 +65,6 @@
 
         - action: input_number.set_value
           target:
-            entity_id: input_number.red_fan_speed
+            entity_id: input_number.westinghouse_cayuga_speed
           data:
             value: "{{ speed }}"
