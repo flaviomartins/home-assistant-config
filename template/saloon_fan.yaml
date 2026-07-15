@@ -18,7 +18,7 @@
 
         - action: remote.send_command
           target:
-            entity_id: remote.red_universal_remote
+            entity_id: remote.saloon_universal_remote
           data:
             device: westinghouse_cayuga
             command: "speed_{{ speed }}"
@@ -32,7 +32,7 @@
       turn_off:
         - action: remote.send_command
           target:
-            entity_id: remote.red_universal_remote
+            entity_id: remote.saloon_universal_remote
           data:
             device: westinghouse_cayuga
             command: speed_0
@@ -58,7 +58,7 @@
 
         - action: remote.send_command
           target:
-            entity_id: remote.red_universal_remote
+            entity_id: remote.saloon_universal_remote
           data:
             device: westinghouse_cayuga
             command: "speed_{{ speed }}"
